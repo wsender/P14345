@@ -582,15 +582,9 @@ Connection ~ 3950 4900
 Wire Wire Line
 	3950 4500 4200 4500
 Wire Wire Line
-	4200 4500 4200 4800
+	4200 4500 4200 5000
 Wire Wire Line
-	4200 4800 4400 4800
-Wire Wire Line
-	3950 5300 4200 5300
-Wire Wire Line
-	4200 5300 4200 5000
-Wire Wire Line
-	4200 5000 4400 5000
+	3950 5300 4250 5300
 Wire Wire Line
 	3000 4800 3100 4800
 Wire Wire Line
@@ -630,4 +624,10 @@ $EndComp
 Wire Wire Line
 	5450 4650 5450 5250
 Connection ~ 5450 4900
+Wire Wire Line
+	4250 5300 4250 4800
+Wire Wire Line
+	4250 4800 4400 4800
+Wire Wire Line
+	4200 5000 4400 5000
 $EndSCHEMATC
