@@ -1,0 +1,56 @@
+eeschema (2013-07-07 BZR 4022)-stable  >> Creation date: 4/12/2014 1:45:55 PM
+#Cmp ( order = Reference )
+| BR1        2KBP06M-E4/45
+| C1         1000u       
+| C2         1000u       
+| C3         1000u       
+| C4         1000u       
+| C5         1.5n        
+| C6         330u/25V    
+| C7         330u/25V    
+| C8         0.1u        
+| C9         0.1u        
+| D1         1N5825      
+| D2         1N5825      
+| D3         1N4001      
+| D4         1N4001      
+| K1         15VAC       
+| L1         37u         
+| L2         47u         
+| P1         CONN_6      
+| R1         1K          
+| R2         6.34K 1%    
+| U1         LM2596SX-3.3
+| U2         LM2596S-ADJ 
+| U3         LM7815CT    
+| U4         LM7915CT    
+#End Cmp
+
+#Cmp ( order = Value )
+| 2KBP06M-E4/45 BR1       
+| 1.5n         C5        
+| 0.1u         C8        
+| 0.1u         C9        
+| 330u/25V     C6        
+| 330u/25V     C7        
+| 1000u        C1        
+| 1000u        C2        
+| 1000u        C3        
+| 1000u        C4        
+| 1N5825       D1        
+| 1N5825       D2        
+| 1N4001       D3        
+| 1N4001       D4        
+| 15VAC        K1        
+| 37u          L1        
+| 47u          L2        
+| CONN_6       P1        
+| 1K           R1        
+| 6.34K 1%     R2        
+| LM2596SX-3.3 U1        
+| LM2596S-ADJ  U2        
+| LM7815CT     U3        
+| LM7915CT     U4        
+#End Cmp
+
+#End List
