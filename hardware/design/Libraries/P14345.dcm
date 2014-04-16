@@ -1,3 +1,11 @@
-EESchema-DOCLIB  Version 2.0  Date: 4/12/2014 7:39:44 PM
+EESchema-DOCLIB  Version 2.0  Date: 4/15/2014 7:46:25 PM
+#
+$CMP NE5532
+D TI OPA2134
+$ENDCMP
+#
+$CMP OPA2134
+D TI OPA2134
+$ENDCMP
 #
 #End Doc Library
