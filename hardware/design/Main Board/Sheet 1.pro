@@ -1,5 +1,7 @@
-update=4/16/2014 2:08:55 PM
-last_client=kicad
+update=4/16/2014 8:29:23 PM
+last_client=eeschema
+[general]
+version=1
 [eeschema]
 version=1
 LibDir=../Libraries
@@ -40,5 +42,3 @@ LibName28=atmel
 LibName29=contrib
 LibName30=valves
 LibName31=P14345
-[general]
-version=1
