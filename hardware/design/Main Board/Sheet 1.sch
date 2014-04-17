@@ -35,9 +35,9 @@ EELAYER 27 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 1 4
+Sheet 1 5
 Title ""
-Date "16 apr 2014"
+Date "17 apr 2014"
 Rev ""
 Comp ""
 Comment1 ""
@@ -114,4 +114,20 @@ Wire Wire Line
 	2700 4300 2900 4300
 Wire Wire Line
 	2600 4550 2900 4550
+$Sheet
+S 6200 2250 1700 1200
+U 534F2525
+F0 "Output Stage" 50
+F1 "Sheet 5.sch" 50
+F2 "CH1_LN_DVR_IN" I L 6200 2500 60 
+F3 "CH1+_OUT" O R 7900 2500 60 
+F4 "CH1-_OUT" O R 7900 2650 60 
+F5 "CH2_LN_DVR_IN" I L 6200 2700 60 
+F6 "CH2+_OUT" O R 7900 2800 60 
+F7 "CH2-_OUT" O R 7900 2950 60 
+$EndSheet
+Wire Wire Line
+	4800 2500 6200 2500
+Wire Wire Line
+	4800 2700 6200 2700
 $EndSCHEMATC
