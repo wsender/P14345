@@ -37,7 +37,7 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 2 5
 Title ""
-Date "17 apr 2014"
+Date "29 apr 2014"
 Rev ""
 Comp ""
 Comment1 ""
@@ -490,13 +490,13 @@ F 3 "" H 7025 2525 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	6775 2450 6775 2500
+	6775 2425 6775 2500
 Wire Wire Line
 	6975 2450 7025 2450
 Wire Wire Line
 	7025 2450 7025 2525
 Wire Wire Line
-	6775 3000 6775 3100
+	6775 3000 6775 3225
 Wire Wire Line
 	6975 3100 7025 3100
 Wire Wire Line
@@ -521,4 +521,28 @@ Text HLabel 7500 2750 2    60   Output ~ 0
 CH1
 Text HLabel 7500 5150 2    60   Output ~ 0
 CH2
+$Comp
+L VSS #PWR?
+U 1 1 535FAFA8
+P 6775 3225
+F 0 "#PWR?" H 6775 3225 30  0001 C CNN
+F 1 "VSS" H 6775 3155 30  0000 C CNN
+F 2 "" H 6775 3225 60  0000 C CNN
+F 3 "" H 6775 3225 60  0000 C CNN
+	1    6775 3225
+	1    0    0    -1  
+$EndComp
+$Comp
+L VDD #PWR?
+U 1 1 535FAFDA
+P 6775 2425
+F 0 "#PWR?" H 6775 2525 30  0001 C CNN
+F 1 "VDD" H 6775 2535 30  0000 C CNN
+F 2 "" H 6775 2425 60  0000 C CNN
+F 3 "" H 6775 2425 60  0000 C CNN
+	1    6775 2425
+	1    0    0    -1  
+$EndComp
+Connection ~ 6775 2450
+Connection ~ 6775 3100
 $EndSCHEMATC
