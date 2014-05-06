@@ -35,9 +35,9 @@ EELAYER 27 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 5 7
+Sheet 5 8
 Title ""
-Date "4 may 2014"
+Date "6 may 2014"
 Rev ""
 Comp ""
 Comment1 ""

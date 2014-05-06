@@ -35,9 +35,9 @@ EELAYER 27 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 1 6
+Sheet 1 8
 Title ""
-Date "2 may 2014"
+Date "6 may 2014"
 Rev ""
 Comp ""
 Comment1 ""
@@ -163,4 +163,10 @@ Wire Wire Line
 	8600 2700 7900 2700
 Wire Wire Line
 	8600 2800 7900 2800
+$Sheet
+S 6800 4100 1550 1350
+U 53665ABB
+F0 "MCU" 50
+F1 "Sheet 7.sch" 50
+$EndSheet
 $EndSCHEMATC
