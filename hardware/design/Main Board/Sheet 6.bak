@@ -33,13 +33,13 @@ LIBS:P14345
 LIBS:Sheet 1-cache
 EELAYER 27 0
 EELAYER END
-$Descr A4 11693 8268
+$Descr USLetter 11000 8500
 encoding utf-8
 Sheet 6 9
-Title ""
-Date "10 may 2014"
-Rev ""
-Comp ""
+Title "Hybrid Audio Dynamics Processor"
+Date "11 may 2014"
+Rev "1.0"
+Comp "P14345"
 Comment1 ""
 Comment2 ""
 Comment3 ""

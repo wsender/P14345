@@ -36,10 +36,10 @@ EELAYER END
 $Descr USLetter 11000 8500
 encoding utf-8
 Sheet 9 9
-Title ""
-Date "10 may 2014"
-Rev ""
-Comp ""
+Title "Hybrid Audio Dynamics Processor"
+Date "11 may 2014"
+Rev "1.0"
+Comp "P14345"
 Comment1 ""
 Comment2 ""
 Comment3 ""
