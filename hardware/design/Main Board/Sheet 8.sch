@@ -1,0 +1,288 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:special
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:P14345
+LIBS:Sheet 1-cache
+EELAYER 27 0
+EELAYER END
+$Descr USLetter 11000 8500
+encoding utf-8
+Sheet 9 9
+Title "Hybrid Audio Dynamics Processor"
+Date "10 may 2014"
+Rev "1.0"
+Comp "P14345"
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L PANASONIC_TX-S K?
+U 1 1 536F9B0D
+P 5550 4800
+F 0 "K?" H 5500 5200 70  0000 C CNN
+F 1 "PANASONIC_TX-S" H 5700 4300 70  0000 C CNN
+F 2 "~" H 5550 4800 60  0000 C CNN
+F 3 "~" H 5550 4800 60  0000 C CNN
+	1    5550 4800
+	-1   0    0    -1  
+$EndComp
+$Comp
+L +3.3V #PWR?
+U 1 1 536F9B3D
+P 6050 5050
+F 0 "#PWR?" H 6050 5010 30  0001 C CNN
+F 1 "+3.3V" H 6050 5160 30  0000 C CNN
+F 2 "" H 6050 5050 60  0000 C CNN
+F 3 "" H 6050 5050 60  0000 C CNN
+	1    6050 5050
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	6200 5050 5950 5050
+$Comp
+L MOSFET_N Q?
+U 1 1 536F9B52
+P 6050 5950
+F 0 "Q?" H 6060 6120 60  0000 R CNN
+F 1 "MMBF170" H 6060 5800 60  0000 R CNN
+F 2 "~" H 6050 5950 60  0000 C CNN
+F 3 "~" H 6050 5950 60  0000 C CNN
+	1    6050 5950
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	5950 5150 5950 5750
+$Comp
+L R R?
+U 1 1 536F9B80
+P 6600 6200
+F 0 "R?" V 6680 6200 40  0000 C CNN
+F 1 "10K" V 6607 6201 40  0000 C CNN
+F 2 "~" V 6530 6200 30  0000 C CNN
+F 3 "~" H 6600 6200 30  0000 C CNN
+	1    6600 6200
+	-1   0    0    -1  
+$EndComp
+$Comp
+L DIODE D?
+U 1 1 536F9B88
+P 6200 5250
+F 0 "D?" H 6200 5350 40  0000 C CNN
+F 1 "DIODE" H 6200 5150 40  0000 C CNN
+F 2 "~" H 6200 5250 60  0000 C CNN
+F 3 "~" H 6200 5250 60  0000 C CNN
+	1    6200 5250
+	0    1    -1   0   
+$EndComp
+Connection ~ 6050 5050
+Wire Wire Line
+	5950 5500 6200 5500
+Wire Wire Line
+	6200 5500 6200 5450
+Connection ~ 5950 5500
+$Comp
+L GND #PWR?
+U 1 1 536F9BDD
+P 5950 6400
+F 0 "#PWR?" H 5950 6400 30  0001 C CNN
+F 1 "GND" H 5950 6330 30  0001 C CNN
+F 2 "" H 5950 6400 60  0000 C CNN
+F 3 "" H 5950 6400 60  0000 C CNN
+	1    5950 6400
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	5950 6150 5950 6400
+Wire Wire Line
+	7050 5950 6250 5950
+$Comp
+L GND #PWR?
+U 1 1 536F9C03
+P 6600 6550
+F 0 "#PWR?" H 6600 6550 30  0001 C CNN
+F 1 "GND" H 6600 6480 30  0001 C CNN
+F 2 "" H 6600 6550 60  0000 C CNN
+F 3 "" H 6600 6550 60  0000 C CNN
+	1    6600 6550
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	6600 6550 6600 6450
+Connection ~ 6600 5950
+Wire Wire Line
+	5950 4850 6350 4850
+Wire Wire Line
+	5950 4550 6350 4550
+Wire Wire Line
+	4750 4450 5150 4450
+Wire Wire Line
+	4750 4650 5150 4650
+Wire Wire Line
+	4750 4750 5150 4750
+Wire Wire Line
+	4750 4950 5150 4950
+$Comp
+L PANASONIC_TX-S K?
+U 1 1 536F9E96
+P 5550 2400
+F 0 "K?" H 5500 2800 70  0000 C CNN
+F 1 "PANASONIC_TX-S" H 5700 1900 70  0000 C CNN
+F 2 "~" H 5550 2400 60  0000 C CNN
+F 3 "~" H 5550 2400 60  0000 C CNN
+	1    5550 2400
+	-1   0    0    -1  
+$EndComp
+$Comp
+L +3.3V #PWR?
+U 1 1 536F9E9C
+P 6050 2650
+F 0 "#PWR?" H 6050 2610 30  0001 C CNN
+F 1 "+3.3V" H 6050 2760 30  0000 C CNN
+F 2 "" H 6050 2650 60  0000 C CNN
+F 3 "" H 6050 2650 60  0000 C CNN
+	1    6050 2650
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	6200 2650 5950 2650
+$Comp
+L MOSFET_N Q?
+U 1 1 536F9EA3
+P 6050 3550
+F 0 "Q?" H 6060 3720 60  0000 R CNN
+F 1 "MMBF170" H 6060 3400 60  0000 R CNN
+F 2 "~" H 6050 3550 60  0000 C CNN
+F 3 "~" H 6050 3550 60  0000 C CNN
+	1    6050 3550
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	5950 2750 5950 3350
+$Comp
+L R R?
+U 1 1 536F9EAA
+P 6600 3800
+F 0 "R?" V 6680 3800 40  0000 C CNN
+F 1 "10K" V 6607 3801 40  0000 C CNN
+F 2 "~" V 6530 3800 30  0000 C CNN
+F 3 "~" H 6600 3800 30  0000 C CNN
+	1    6600 3800
+	-1   0    0    -1  
+$EndComp
+$Comp
+L DIODE D?
+U 1 1 536F9EB0
+P 6200 2850
+F 0 "D?" H 6200 2950 40  0000 C CNN
+F 1 "DIODE" H 6200 2750 40  0000 C CNN
+F 2 "~" H 6200 2850 60  0000 C CNN
+F 3 "~" H 6200 2850 60  0000 C CNN
+	1    6200 2850
+	0    1    -1   0   
+$EndComp
+Connection ~ 6050 2650
+Wire Wire Line
+	5950 3100 6200 3100
+Wire Wire Line
+	6200 3100 6200 3050
+Connection ~ 5950 3100
+$Comp
+L GND #PWR?
+U 1 1 536F9EBA
+P 5950 4000
+F 0 "#PWR?" H 5950 4000 30  0001 C CNN
+F 1 "GND" H 5950 3930 30  0001 C CNN
+F 2 "" H 5950 4000 60  0000 C CNN
+F 3 "" H 5950 4000 60  0000 C CNN
+	1    5950 4000
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	5950 3750 5950 4000
+Wire Wire Line
+	7050 3550 6250 3550
+$Comp
+L GND #PWR?
+U 1 1 536F9EC2
+P 6600 4150
+F 0 "#PWR?" H 6600 4150 30  0001 C CNN
+F 1 "GND" H 6600 4080 30  0001 C CNN
+F 2 "" H 6600 4150 60  0000 C CNN
+F 3 "" H 6600 4150 60  0000 C CNN
+	1    6600 4150
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	6600 4150 6600 4050
+Connection ~ 6600 3550
+Wire Wire Line
+	5950 2450 6350 2450
+Wire Wire Line
+	5950 2150 6350 2150
+Wire Wire Line
+	4750 2050 5150 2050
+Wire Wire Line
+	4750 2250 5150 2250
+Wire Wire Line
+	4750 2350 5150 2350
+Wire Wire Line
+	4750 2550 5150 2550
+Text HLabel 7050 3550 2    50   Input ~ 0
+RELAY_1
+Text HLabel 7050 5950 2    50   Input ~ 0
+RELAY_2
+Text HLabel 4750 2050 0    50   Input ~ 0
+CH1_A+
+Text HLabel 4750 2250 0    50   Input ~ 0
+CH1_B+
+Text HLabel 4750 2350 0    50   Input ~ 0
+CH1_A-
+Text HLabel 4750 2550 0    50   Input ~ 0
+CH1_B-
+Text HLabel 6350 2150 2    50   Output ~ 0
+CH1+
+Text HLabel 6350 2450 2    50   Output ~ 0
+CH1-
+Text HLabel 4750 4450 0    50   Input ~ 0
+CH2_A+
+Text HLabel 4750 4650 0    50   Input ~ 0
+CH2_B+
+Text HLabel 4750 4750 0    50   Input ~ 0
+CH2_A-
+Text HLabel 4750 4950 0    50   Input ~ 0
+CH2_B-
+Text HLabel 6350 4550 2    50   Output ~ 0
+CH2+
+Text HLabel 6350 4850 2    50   Output ~ 0
+CH2-
+$EndSCHEMATC

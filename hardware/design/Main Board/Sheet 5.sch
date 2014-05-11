@@ -35,11 +35,11 @@ EELAYER 27 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 5 8
-Title ""
-Date "6 may 2014"
-Rev ""
-Comp ""
+Sheet 5 9
+Title "Hybrid Audio Dynamics Processor"
+Date "10 may 2014"
+Rev "1.0"
+Comp "P14345"
 Comment1 ""
 Comment2 ""
 Comment3 ""
