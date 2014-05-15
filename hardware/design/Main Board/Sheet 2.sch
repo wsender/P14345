@@ -37,7 +37,7 @@ $Descr USLetter 11000 8500
 encoding utf-8
 Sheet 2 9
 Title "Hybrid Audio Dynamics Processor"
-Date "11 may 2014"
+Date "15 may 2014"
 Rev "1.0"
 Comp "P14345"
 Comment1 ""
@@ -109,28 +109,6 @@ F 1 "22K" V 5532 2951 40  0000 C CNN
 F 2 "~" V 5455 2950 30  0000 C CNN
 F 3 "~" H 5525 2950 30  0000 C CNN
 	1    5525 2950
-	0    -1   -1   0   
-$EndComp
-$Comp
-L C C?
-U 1 1 534DBD6E
-P 4875 2250
-F 0 "C?" V 4925 2350 40  0000 L CNN
-F 1 "100n" V 4925 2050 40  0000 L CNN
-F 2 "~" H 4913 2100 30  0000 C CNN
-F 3 "~" H 4875 2250 60  0000 C CNN
-	1    4875 2250
-	0    -1   -1   0   
-$EndComp
-$Comp
-L C C?
-U 1 1 534DBD7D
-P 4875 3250
-F 0 "C?" V 4925 3375 40  0000 L CNN
-F 1 "100n" V 4925 3050 40  0000 L CNN
-F 2 "~" H 4913 3100 30  0000 C CNN
-F 3 "~" H 4875 3250 60  0000 C CNN
-	1    4875 3250
 	0    -1   -1   0   
 $EndComp
 $Comp
@@ -222,28 +200,6 @@ F 3 "~" H 5575 5350 30  0000 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L C C?
-U 1 1 534DBDE2
-P 4925 4650
-F 0 "C?" V 4975 4725 40  0000 L CNN
-F 1 "100n" V 4975 4450 40  0000 L CNN
-F 2 "~" H 4963 4500 30  0000 C CNN
-F 3 "~" H 4925 4650 60  0000 C CNN
-	1    4925 4650
-	0    -1   -1   0   
-$EndComp
-$Comp
-L C C?
-U 1 1 534DBDE8
-P 4925 5650
-F 0 "C?" V 4975 5725 40  0000 L CNN
-F 1 "100n" V 4975 5450 40  0000 L CNN
-F 2 "~" H 4963 5500 30  0000 C CNN
-F 3 "~" H 4925 5650 60  0000 C CNN
-	1    4925 5650
-	0    -1   -1   0   
-$EndComp
-$Comp
 L R R?
 U 1 1 534DBDEE
 P 6225 5600
@@ -290,17 +246,7 @@ $EndComp
 Wire Wire Line
 	5075 2600 5275 2600
 Wire Wire Line
-	5075 2250 5175 2250
-Wire Wire Line
-	5175 2250 5175 2600
-Connection ~ 5175 2600
-Wire Wire Line
 	5075 2950 5275 2950
-Wire Wire Line
-	5075 3250 5175 3250
-Wire Wire Line
-	5175 3250 5175 2950
-Connection ~ 5175 2950
 Wire Wire Line
 	5775 2600 6075 2600
 Wire Wire Line
@@ -343,45 +289,15 @@ Connection ~ 7375 2200
 Wire Wire Line
 	4675 2950 4325 2950
 Wire Wire Line
-	4675 3250 4575 3250
-Wire Wire Line
-	4575 3250 4575 2950
-Connection ~ 4575 2950
-Wire Wire Line
 	4675 2600 4325 2600
-Wire Wire Line
-	4675 2250 4575 2250
-Wire Wire Line
-	4575 2250 4575 2600
-Connection ~ 4575 2600
 Wire Wire Line
 	5125 5000 5325 5000
 Wire Wire Line
 	5125 5350 5325 5350
 Wire Wire Line
-	5125 4650 5225 4650
-Wire Wire Line
-	5225 4650 5225 5000
-Connection ~ 5225 5000
-Wire Wire Line
-	5125 5650 5225 5650
-Wire Wire Line
-	5225 5650 5225 5350
-Connection ~ 5225 5350
-Wire Wire Line
 	4325 5000 4725 5000
 Wire Wire Line
-	4725 4650 4625 4650
-Wire Wire Line
-	4625 4650 4625 5000
-Connection ~ 4625 5000
-Wire Wire Line
 	4725 5350 4325 5350
-Wire Wire Line
-	4725 5650 4625 5650
-Wire Wire Line
-	4625 5650 4625 5350
-Connection ~ 4625 5350
 Wire Wire Line
 	5825 5350 6125 5350
 Wire Wire Line
@@ -545,4 +461,114 @@ F 3 "" H 6775 2425 60  0000 C CNN
 $EndComp
 Connection ~ 6775 2450
 Connection ~ 6775 3100
+Text Notes 5350 6600 0    100  ~ 0
+All Resistors 0.1%\n
+$Comp
+L R R?
+U 1 1 5374A1ED
+P 4550 3300
+F 0 "R?" V 4630 3300 40  0000 C CNN
+F 1 "10K" V 4557 3301 40  0000 C CNN
+F 2 "~" V 4480 3300 30  0000 C CNN
+F 3 "~" H 4550 3300 30  0000 C CNN
+	1    4550 3300
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R?
+U 1 1 5374A201
+P 4550 2250
+F 0 "R?" V 4630 2250 40  0000 C CNN
+F 1 "10K" V 4557 2251 40  0000 C CNN
+F 2 "~" V 4480 2250 30  0000 C CNN
+F 3 "~" H 4550 2250 30  0000 C CNN
+	1    4550 2250
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R?
+U 1 1 5374A207
+P 4550 4650
+F 0 "R?" V 4630 4650 40  0000 C CNN
+F 1 "10K" V 4557 4651 40  0000 C CNN
+F 2 "~" V 4480 4650 30  0000 C CNN
+F 3 "~" H 4550 4650 30  0000 C CNN
+	1    4550 4650
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R?
+U 1 1 5374A20D
+P 4550 5700
+F 0 "R?" V 4630 5700 40  0000 C CNN
+F 1 "10K" V 4557 5701 40  0000 C CNN
+F 2 "~" V 4480 5700 30  0000 C CNN
+F 3 "~" H 4550 5700 30  0000 C CNN
+	1    4550 5700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4550 2500 4550 2600
+Connection ~ 4550 2600
+Wire Wire Line
+	4550 3050 4550 2950
+Connection ~ 4550 2950
+Wire Wire Line
+	4550 4900 4550 5000
+Connection ~ 4550 5000
+Wire Wire Line
+	4550 5450 4550 5350
+Connection ~ 4550 5350
+Wire Wire Line
+	4550 5950 4550 6000
+Wire Wire Line
+	4550 4400 4550 4350
+Wire Wire Line
+	4550 3550 4550 3600
+Wire Wire Line
+	4550 2000 4550 1950
+$Comp
+L GND #PWR?
+U 1 1 5374A46B
+P 4550 1950
+F 0 "#PWR?" H 4550 1950 30  0001 C CNN
+F 1 "GND" H 4550 1880 30  0001 C CNN
+F 2 "" H 4550 1950 60  0000 C CNN
+F 3 "" H 4550 1950 60  0000 C CNN
+	1    4550 1950
+	-1   0    0    1   
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 5374A47A
+P 4550 3600
+F 0 "#PWR?" H 4550 3600 30  0001 C CNN
+F 1 "GND" H 4550 3530 30  0001 C CNN
+F 2 "" H 4550 3600 60  0000 C CNN
+F 3 "" H 4550 3600 60  0000 C CNN
+	1    4550 3600
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 5374A489
+P 4550 4350
+F 0 "#PWR?" H 4550 4350 30  0001 C CNN
+F 1 "GND" H 4550 4280 30  0001 C CNN
+F 2 "" H 4550 4350 60  0000 C CNN
+F 3 "" H 4550 4350 60  0000 C CNN
+	1    4550 4350
+	-1   0    0    1   
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 5374A498
+P 4550 6000
+F 0 "#PWR?" H 4550 6000 30  0001 C CNN
+F 1 "GND" H 4550 5930 30  0001 C CNN
+F 2 "" H 4550 6000 60  0000 C CNN
+F 3 "" H 4550 6000 60  0000 C CNN
+	1    4550 6000
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
