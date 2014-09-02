@@ -37,7 +37,7 @@ $Descr USLetter 11000 8500
 encoding utf-8
 Sheet 7 9
 Title "Hybrid Audio Dynamics Processor"
-Date "26 aug 2014"
+Date "2 sep 2014"
 Rev "1.0"
 Comp "P14345"
 Comment1 ""

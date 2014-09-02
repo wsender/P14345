@@ -37,7 +37,7 @@ $Descr USLetter 11000 8500
 encoding utf-8
 Sheet 5 9
 Title "Hybrid Audio Dynamics Processor"
-Date "26 aug 2014"
+Date "2 sep 2014"
 Rev "1.0"
 Comp "P14345"
 Comment1 ""
@@ -320,9 +320,9 @@ Wire Wire Line
 	3450 2500 3050 2500
 Text HLabel 3050 2500 0    60   Input ~ 0
 CH1_LN_DVR_IN
-Text HLabel 7350 2450 2    60   Output ~ 0
+Text HLabel 7950 2450 2    60   Output ~ 0
 CH1+_OUT
-Text HLabel 7350 2800 2    60   Output ~ 0
+Text HLabel 7950 2800 2    60   Output ~ 0
 CH1-_OUT
 $Comp
 L THAT1646 U8
@@ -599,9 +599,9 @@ Wire Wire Line
 	3450 4500 3050 4500
 Text HLabel 3050 4500 0    60   Input ~ 0
 CH2_LN_DVR_IN
-Text HLabel 7350 4450 2    60   Output ~ 0
+Text HLabel 7950 4450 2    60   Output ~ 0
 CH2+_OUT
-Text HLabel 7350 4800 2    60   Output ~ 0
+Text HLabel 7950 4800 2    60   Output ~ 0
 CH2-_OUT
 $Comp
 L VSS #PWR053
@@ -795,4 +795,56 @@ Connection ~ 7200 2800
 Wire Wire Line
 	7200 2400 7200 2450
 Connection ~ 7200 2450
+$Comp
+L R R112
+U 1 1 54054894
+P 7600 2450
+F 0 "R112" V 7680 2450 40  0000 C CNN
+F 1 "0" V 7607 2451 40  0000 C CNN
+F 2 "~" V 7530 2450 30  0000 C CNN
+F 3 "~" H 7600 2450 30  0000 C CNN
+	1    7600 2450
+	0    -1   -1   0   
+$EndComp
+$Comp
+L R R113
+U 1 1 540548A3
+P 7600 2800
+F 0 "R113" V 7680 2800 40  0000 C CNN
+F 1 "0" V 7607 2801 40  0000 C CNN
+F 2 "~" V 7530 2800 30  0000 C CNN
+F 3 "~" H 7600 2800 30  0000 C CNN
+	1    7600 2800
+	0    -1   -1   0   
+$EndComp
+$Comp
+L R R114
+U 1 1 540548B2
+P 7600 4450
+F 0 "R114" V 7680 4450 40  0000 C CNN
+F 1 "R" V 7607 4451 40  0000 C CNN
+F 2 "~" V 7530 4450 30  0000 C CNN
+F 3 "~" H 7600 4450 30  0000 C CNN
+	1    7600 4450
+	0    -1   -1   0   
+$EndComp
+$Comp
+L R R115
+U 1 1 540548C1
+P 7600 4800
+F 0 "R115" V 7680 4800 40  0000 C CNN
+F 1 "R" V 7607 4801 40  0000 C CNN
+F 2 "~" V 7530 4800 30  0000 C CNN
+F 3 "~" H 7600 4800 30  0000 C CNN
+	1    7600 4800
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	7950 2800 7850 2800
+Wire Wire Line
+	7950 2450 7850 2450
+Wire Wire Line
+	7950 4800 7850 4800
+Wire Wire Line
+	7950 4450 7850 4450
 $EndSCHEMATC

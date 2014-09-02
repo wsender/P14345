@@ -37,7 +37,7 @@ $Descr USLetter 11000 8500
 encoding utf-8
 Sheet 4 9
 Title "Hybrid Audio Dynamics Processor"
-Date "26 aug 2014"
+Date "2 sep 2014"
 Rev "1.0"
 Comp "P14345"
 Comment1 ""
@@ -346,17 +346,17 @@ Text HLabel 3500 2350 0    60   Input ~ 0
 CH1_VCA_IN
 Text HLabel 3500 4800 0    60   Input ~ 0
 CH2_VCA_IN
-Text HLabel 7600 2450 2    60   Output ~ 0
+Text HLabel 8200 2450 2    60   Output ~ 0
 CH1_VCA_OUT
-Text HLabel 7600 4900 2    60   Output ~ 0
+Text HLabel 8200 4900 2    60   Output ~ 0
 CH2_VCA_OUT
-Text HLabel 5450 1600 0    60   Input ~ 0
+Text HLabel 4850 1600 0    60   Input ~ 0
 CH1_CV+
-Text HLabel 5450 3200 0    60   Input ~ 0
+Text HLabel 4850 3200 0    60   Input ~ 0
 CH1_CV-
-Text HLabel 5450 5650 0    60   Input ~ 0
+Text HLabel 4850 5650 0    60   Input ~ 0
 CH2_CV-
-Text HLabel 5450 4050 0    60   Input ~ 0
+Text HLabel 4850 4050 0    60   Input ~ 0
 CH2_CV+
 $Comp
 L CSMALL C23
@@ -691,4 +691,82 @@ Connection ~ 7550 2450
 Wire Wire Line
 	7550 4850 7550 4900
 Connection ~ 7550 4900
+$Comp
+L R R102
+U 1 1 54052744
+P 7850 2450
+F 0 "R102" V 7930 2450 40  0000 C CNN
+F 1 "0" V 7857 2451 40  0000 C CNN
+F 2 "~" V 7780 2450 30  0000 C CNN
+F 3 "~" H 7850 2450 30  0000 C CNN
+	1    7850 2450
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	8100 2450 8200 2450
+$Comp
+L R R103
+U 1 1 540527A8
+P 7850 4900
+F 0 "R103" V 7930 4900 40  0000 C CNN
+F 1 "0" V 7857 4901 40  0000 C CNN
+F 2 "~" V 7780 4900 30  0000 C CNN
+F 3 "~" H 7850 4900 30  0000 C CNN
+	1    7850 4900
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	8100 4900 8200 4900
+$Comp
+L R R108
+U 1 1 54053DF1
+P 5200 1600
+F 0 "R108" V 5280 1600 40  0000 C CNN
+F 1 "0" V 5207 1601 40  0000 C CNN
+F 2 "~" V 5130 1600 30  0000 C CNN
+F 3 "~" H 5200 1600 30  0000 C CNN
+	1    5200 1600
+	0    -1   -1   0   
+$EndComp
+$Comp
+L R R109
+U 1 1 54053E00
+P 5200 3200
+F 0 "R109" V 5280 3200 40  0000 C CNN
+F 1 "0" V 5207 3201 40  0000 C CNN
+F 2 "~" V 5130 3200 30  0000 C CNN
+F 3 "~" H 5200 3200 30  0000 C CNN
+	1    5200 3200
+	0    -1   -1   0   
+$EndComp
+$Comp
+L R R110
+U 1 1 54053E0F
+P 5200 4050
+F 0 "R110" V 5280 4050 40  0000 C CNN
+F 1 "0" V 5207 4051 40  0000 C CNN
+F 2 "~" V 5130 4050 30  0000 C CNN
+F 3 "~" H 5200 4050 30  0000 C CNN
+	1    5200 4050
+	0    -1   -1   0   
+$EndComp
+$Comp
+L R R111
+U 1 1 54053E1E
+P 5200 5650
+F 0 "R111" V 5280 5650 40  0000 C CNN
+F 1 "0" V 5207 5651 40  0000 C CNN
+F 2 "~" V 5130 5650 30  0000 C CNN
+F 3 "~" H 5200 5650 30  0000 C CNN
+	1    5200 5650
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	4950 5650 4850 5650
+Wire Wire Line
+	4950 4050 4850 4050
+Wire Wire Line
+	4950 3200 4850 3200
+Wire Wire Line
+	4850 1600 4950 1600
 $EndSCHEMATC

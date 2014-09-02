@@ -37,7 +37,7 @@ $Descr USLetter 11000 8500
 encoding utf-8
 Sheet 6 9
 Title "Hybrid Audio Dynamics Processor"
-Date "26 aug 2014"
+Date "2 sep 2014"
 Rev "1.0"
 Comp "P14345"
 Comment1 ""
@@ -591,9 +591,9 @@ Text HLabel 1750 2900 0    60   Input ~ 0
 LPF_IN_1
 Text HLabel 1750 4800 0    60   Input ~ 0
 LPF_IN_2
-Text HLabel 7600 3100 2    60   Output ~ 0
+Text HLabel 8200 3100 2    60   Output ~ 0
 LPF_OUT_1
-Text HLabel 7600 5000 2    60   Output ~ 0
+Text HLabel 8200 5000 2    60   Output ~ 0
 LPF_OUT_2
 $Comp
 L TST P23
@@ -647,4 +647,30 @@ Connection ~ 7500 3100
 Wire Wire Line
 	7500 4950 7500 5000
 Connection ~ 7500 5000
+$Comp
+L R R104
+U 1 1 54052E3B
+P 7850 3100
+F 0 "R104" V 7930 3100 40  0000 C CNN
+F 1 "0" V 7857 3101 40  0000 C CNN
+F 2 "~" V 7780 3100 30  0000 C CNN
+F 3 "~" H 7850 3100 30  0000 C CNN
+	1    7850 3100
+	0    -1   -1   0   
+$EndComp
+$Comp
+L R R105
+U 1 1 54052E4A
+P 7850 5000
+F 0 "R105" V 7930 5000 40  0000 C CNN
+F 1 "0" V 7857 5001 40  0000 C CNN
+F 2 "~" V 7780 5000 30  0000 C CNN
+F 3 "~" H 7850 5000 30  0000 C CNN
+	1    7850 5000
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	8100 3100 8200 3100
+Wire Wire Line
+	8100 5000 8200 5000
 $EndSCHEMATC
