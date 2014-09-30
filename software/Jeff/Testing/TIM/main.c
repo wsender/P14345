@@ -50,7 +50,7 @@ int main(void)
   //PrescalerValue = (uint16_t) ((SystemCoreClock) / 72000000) - 1;
 
   /* Time base configuration */
-  TIM_TimeBaseStructure.TIM_Period = 10;
+  TIM_TimeBaseStructure.TIM_Period = 0;
   TIM_TimeBaseStructure.TIM_Prescaler = 7199;
   TIM_TimeBaseStructure.TIM_ClockDivision = 0;
   TIM_TimeBaseStructure.TIM_CounterMode = TIM_CounterMode_Up;

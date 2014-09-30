@@ -24,13 +24,17 @@
 /* Private define ------------------------------------------------------------*/
 /* Private macro -------------------------------------------------------------*/
 /* Private variables ---------------------------------------------------------*/
-	__IO uint32_t TimingDelay = 0;
+
 	
 		uint8_t RotaryPosition = 1;
 		uint8_t CW;
 		uint8_t CCW;
 		GPIO_InitTypeDef        GPIO_InitStructure;
+		
+		
+
 /* Private function prototypes -----------------------------------------------*/
+
 /* Private functions ---------------------------------------------------------*/
 
 /**
@@ -41,12 +45,7 @@
 int main(void)
 {
 	
-	STM_EVAL_LEDInit(LED8);
-	STM_EVAL_LEDInit(LED7);
 	
-	STM_EVAL_LEDOff(LED8);
-	STM_EVAL_LEDOff(LED7);
- 
 	/* GPIOE Periph clock enable */
   RCC_AHBPeriphClockCmd(RCC_AHBPeriph_GPIOE, ENABLE);
   
@@ -55,7 +54,7 @@ int main(void)
   GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IN;
   GPIO_InitStructure.GPIO_OType = GPIO_OType_PP;
   GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
-  GPIO_InitStructure.GPIO_PuPd = GPIO_PuPd_NOPULL;
+  GPIO_InitStructure.GPIO_PuPd = GPIO_PuPd_DOWN;
   GPIO_Init(GPIOE, &GPIO_InitStructure);
 	
 	/*
@@ -70,7 +69,7 @@ int main(void)
   GPIO_InitStructure.GPIO_Mode = GPIO_Mode_OUT;
   GPIO_InitStructure.GPIO_OType = GPIO_OType_PP;
   GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
-  GPIO_InitStructure.GPIO_PuPd = GPIO_PuPd_NOPULL;
+  GPIO_InitStructure.GPIO_PuPd = GPIO_PuPd_UP;
   GPIO_Init(GPIOE, &GPIO_InitStructure);
 	
 	/*
@@ -82,109 +81,111 @@ int main(void)
 		GPIOE->BSRR = 0x0080;
 
 
+
+  /* Initialize Leds mounted on STM32F3-Discovery EVAL board */
+  STM_EVAL_LEDInit(LED6);
+	STM_EVAL_LEDInit(LED7);
+  /* Turn on LED3, LED4, LED5 and LED6 */
+  STM_EVAL_LEDOff(LED6);
+	STM_EVAL_LEDOff(LED7);
+	
+	
+	
+	
 	while (1)
   {
-	
-		//Read inputs PE8 and PE9
+		
+		
 		CW = GPIO_ReadInputDataBit(GPIOE, GPIO_Pin_8);
 		
 		CCW = GPIO_ReadInputDataBit(GPIOE, GPIO_Pin_9);
 		
 		
-	/*	
-		//First, find if CW or CCW are on
-		if( CW != 0 || CCW != 0 )
+		//Want to only accept data if one is zero and other goes from low to high
+		//Change occurs when value != old value
+		//Old value should be equal to 0, current value should be high ( greater than 0 )
+		if( CW > 0 )
 		{
-			//Then, wait until both are on
-			while( CW == 0 || CCW == 0 )
+			
+			while( CW > 0 )
 			{
 				CW = GPIO_ReadInputDataBit(GPIOE, GPIO_Pin_8);
-		
 				CCW = GPIO_ReadInputDataBit(GPIOE, GPIO_Pin_9);
+	
+				if( CCW > 0 )
+				{
+					if( RotaryPosition < 10 )
+					{
+						RotaryPosition++;
+					}
+					
+					STM_EVAL_LEDToggle(LED7);
+				}
 			}
 		}
 		
-		if( CW != 0 && CCW != 0 )
+		if( CCW > 0 )
 		{
-			//Then, wait until ONE is disabled
-			while( CW != 0 && CCW != 0 )
+			
+			while( CCW > 0 )
 			{
 				CW = GPIO_ReadInputDataBit(GPIOE, GPIO_Pin_8);
-		
 				CCW = GPIO_ReadInputDataBit(GPIOE, GPIO_Pin_9);
+	
+				if( CW > 0 )
+				{
+					if( RotaryPosition > 0 )
+					{
+						RotaryPosition--;
+					}
+					
+					STM_EVAL_LEDToggle(LED6);
+				}
 			}
 		}
-*/
-		//The remaining signal is the turn direction
 		
-			if( CW != 0 && RotaryPosition < 10)
+		
+		/*
+		if( CW > 0 )
+		{
+			if( RotaryPosition < 10 )
 			{
 				RotaryPosition++;
-				STM_EVAL_LEDToggle(LED7);
-				 STM_EVAL_LEDOff(LED8);
-				//Delay(10);
 			}
 			
-				if( CCW != 0 && RotaryPosition > 0 )
+			STM_EVAL_LEDToggle(LED6);
+			
+			while( CW > 0 || CCW > 0 )
+			{
+				CW = GPIO_ReadInputDataBit(GPIOE, GPIO_Pin_8);
+		
+				CCW = GPIO_ReadInputDataBit(GPIOE, GPIO_Pin_9);
+			}
+			
+		}
+		
+		if( CCW > 0 )
+		{
+			if( RotaryPosition > 0 )
 			{
 				RotaryPosition--;
-				STM_EVAL_LEDToggle(LED8);
-				STM_EVAL_LEDOff(LED7);
-				//Delay(10);
 			}
+			STM_EVAL_LEDToggle(LED7);
 			
-			
-			//wait for rotary encoder to stop inputting
-			while( CW !=0 && CCW !=0 )
+			while( CW > 0 || CCW > 0 )
 			{
+				CW = GPIO_ReadInputDataBit(GPIOE, GPIO_Pin_8);
+		
+				CCW = GPIO_ReadInputDataBit(GPIOE, GPIO_Pin_9);
 			}
 			
-			while( CW ==0 && CCW ==0 )
-			{
-			}
-		
-		
+		}
+		*/
   } //end while
 	
 } //end main
 
 
-
-
-void Delay(__IO uint32_t nTime)
-{
-  TimingDelay = nTime;
-
-  while(TimingDelay != 0);
-}
-
-void TimingDelay_Decrement(void)
-{
-  if (TimingDelay != 0x00)
-  { 
-    TimingDelay--;
-  }
-}
-
-/**
-  * @brief  Basic management of the timeout situation.
-  * @param  None.
-  * @retval None.
-  */
-uint32_t LSM303DLHC_TIMEOUT_UserCallback(void)
-{
-  return 0;
-}
-
-/**
-  * @brief  Basic management of the timeout situation.
-  * @param  None.
-  * @retval None.
-  */
-uint32_t L3GD20_TIMEOUT_UserCallback(void)
-{
-  return 0;
-}
 
 
 
